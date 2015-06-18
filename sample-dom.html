@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title>Sencha Fiddle - Working with Custom Class in Ext JS 4.x</title>
+  <link rel="stylesheet" href="https://extjs.cachefly.net/ext/gpl/4.2.1/packages/ext-theme-neptune/build/resources/ext-theme-neptune-all.css" />
+  <script type="text/javascript" src="https://extjs.cachefly.net/ext/gpl/4.2.1/ext-all-debug.js"></script>
+  <script type="text/javascript" src="https://extjs.cachefly.net/ext/gpl/4.2.1/packages/ext-theme-neptune/build/ext-theme-neptune-debug.js"></script>
+</head>
+
+<body>
+  <div id="myDivId"></div>
+  <div class="myDivClass"></div>
+  <script type="text/javascript">
+    // Main usage: DOM ID
+    var someEl = Ext.get('myDivId');
+    // Wrap a DOM node as an Element
+    var someDom = document.getElementById('myDivId');
+    someEl = Ext.get(someDom);
+    someEl.update('Hello World');
+    // Get all DOM nodes with class "oddRow" that are children of
+    // my component's top-level element.
+    var someNodes = Ext.query('.myDivClass');
+    var compositeEl = Ext.select('div#myDivId');
+  </script>
+</body>
+
+</html>
